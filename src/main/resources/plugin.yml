@@ -1,3 +1,7 @@
 name: KickTheBukkit
 version: ${project.version}
 main: io.github.mlutze.kickthebukkit.KickTheBukkit
+
+commands:
+  test:
+    description: A test command.
