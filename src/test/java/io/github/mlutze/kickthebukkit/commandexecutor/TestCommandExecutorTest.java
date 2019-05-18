@@ -11,7 +11,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class TestCommandExecutorTest {
 
-
     private TestCommandExecutor sut;
 
     @Before
