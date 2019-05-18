@@ -11,22 +11,22 @@ import org.mockito.junit.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class TestCommandExecutorTest {
 
-    private TestCommandExecutor sut;
+  private TestCommandExecutor sut;
 
-    @Before
-    public void setUp() {
-        sut = new TestCommandExecutor();
-    }
+  @Before
+  public void setUp() {
+    sut = new TestCommandExecutor();
+  }
 
-    @Test
-    public void shouldSendMessageToPlayer() {
-        CommandSender commandSender = Mockito.mock(CommandSender.class);
-        Command command = Mockito.mock(Command.class);
+  @Test
+  public void shouldSendMessageToPlayer() {
+    CommandSender commandSender = Mockito.mock(CommandSender.class);
+    Command command = Mockito.mock(Command.class);
 
-        Mockito.doNothing().when(commandSender).sendMessage("Test successful.");
-        sut.onCommand(commandSender, command, "label", new String[]{});
+    Mockito.doNothing().when(commandSender).sendMessage("Test successful.");
+    sut.onCommand(commandSender, command, "label", new String[] {});
 
-        Mockito.verify(commandSender).sendMessage("Test successful.");
-    }
+    Mockito.verify(commandSender).sendMessage("Test successful.");
+  }
 
 }
