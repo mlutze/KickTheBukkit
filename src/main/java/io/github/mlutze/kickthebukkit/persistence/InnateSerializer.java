@@ -1,10 +1,11 @@
 package io.github.mlutze.kickthebukkit.persistence;
 
+import lombok.AllArgsConstructor;
+import org.bukkit.configuration.serialization.ConfigurationSerializable;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
-import lombok.AllArgsConstructor;
-import org.bukkit.configuration.serialization.ConfigurationSerializable;
 
 @AllArgsConstructor
 public class InnateSerializer<T extends ConfigurationSerializable> implements Serializer<T> {
@@ -23,8 +24,8 @@ public class InnateSerializer<T extends ConfigurationSerializable> implements Se
       Object object = deserializeMethod.invoke(null, serialization);
       return (T) object;
     } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-      throw new IllegalStateException("ConfigurationSerializable " + clazz.getName() +
-          " does not correctly implement static deserialize(Map<String, Object>", e);
+      throw new IllegalStateException("ConfigurationSerializable " + clazz.getName()
+          + " does not correctly implement static deserialize(Map<String, Object>", e);
     }
   }
 

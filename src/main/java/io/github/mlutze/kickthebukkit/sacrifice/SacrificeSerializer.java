@@ -1,12 +1,14 @@
 package io.github.mlutze.kickthebukkit.sacrifice;
 
 import io.github.mlutze.kickthebukkit.persistence.Serializer;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+
 import com.google.common.collect.ImmutableMap;
 import lombok.AllArgsConstructor;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @AllArgsConstructor
 public class SacrificeSerializer implements Serializer<Sacrifice> {

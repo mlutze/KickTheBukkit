@@ -1,7 +1,8 @@
 package io.github.mlutze.kickthebukkit.sacrifice;
 
-import java.util.List;
 import lombok.AllArgsConstructor;
+
+import java.util.List;
 
 @AllArgsConstructor
 public class DefaultSacrificeManager implements SacrificeManager {

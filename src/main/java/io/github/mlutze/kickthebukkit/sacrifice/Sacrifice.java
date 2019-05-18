@@ -1,8 +1,9 @@
 package io.github.mlutze.kickthebukkit.sacrifice;
 
-import java.util.List;
 import lombok.Data;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.List;
 
 @Data
 public class Sacrifice {

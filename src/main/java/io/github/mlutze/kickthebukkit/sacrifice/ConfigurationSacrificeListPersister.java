@@ -2,13 +2,15 @@ package io.github.mlutze.kickthebukkit.sacrifice;
 
 import io.github.mlutze.kickthebukkit.persistence.Persister;
 import io.github.mlutze.kickthebukkit.persistence.Serializer;
+
+import lombok.AllArgsConstructor;
+import org.bukkit.configuration.Configuration;
+import org.bukkit.configuration.file.YamlConfiguration;
+
 import java.io.File;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import lombok.AllArgsConstructor;
-import org.bukkit.configuration.Configuration;
-import org.bukkit.configuration.file.YamlConfiguration;
 
 @AllArgsConstructor
 public class ConfigurationSacrificeListPersister implements Persister<List<Sacrifice>> {
